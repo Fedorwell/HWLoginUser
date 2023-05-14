@@ -37,6 +37,7 @@ final class UserViewController: UIViewController {
     }
     
     private func setLabel() {
+        userImageView.image = UIImage(named: person.userImage)
         nameLabel.text = person.name
         surnameLabel.text = person.lastname
         professionLabel.text = person.profession

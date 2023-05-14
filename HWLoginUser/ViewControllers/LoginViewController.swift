@@ -24,7 +24,7 @@ final class LoginViewController: UIViewController {
         user.password
     }
     
-
+    
     // MARK: - Override Methods
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
@@ -32,7 +32,7 @@ final class LoginViewController: UIViewController {
         
         guard let userTabBarVC else { return }
         guard let viewControllers = userTabBarVC.viewControllers else { return }
-
+        
         viewControllers.forEach { viewController in
             if let welcomeVC = viewController as? WelcomeViewController {
                 welcomeVC.user = user.person.name
@@ -65,27 +65,27 @@ final class LoginViewController: UIViewController {
         performSegue(withIdentifier: "openWelcomeVC", sender: nil)
     }
     
-//    override func shouldPerformSegue(withIdentifier identifier: String, sender: Any?) -> Bool {
-//
-//        guard userNameTextField.text == userName,
-//              passwordTextField.text == password else {
-//            showAlert(
-//                title: "Username or password is not correct!",
-//                andMessage: "Please, enter correct login and password!",
-//                textField: passwordTextField
-//            )
-//            return false
-//        }
-//
-//        return true
-//    }
+    //    override func shouldPerformSegue(withIdentifier identifier: String, sender: Any?) -> Bool {
+    //
+    //        guard userNameTextField.text == userName,
+    //              passwordTextField.text == password else {
+    //            showAlert(
+    //                title: "Username or password is not correct!",
+    //                andMessage: "Please, enter correct login and password!",
+    //                textField: passwordTextField
+    //            )
+    //            return false
+    //        }
+    //
+    //        return true
+    //    }
     
     
     
     @IBAction func forgotRegisterData(_ sender: UIButton) {
         sender.tag == 0
-       ? showAlert(title: "Oops!", andMessage: "User name is \(userName) 🙄")
-
+        ? showAlert(title: "Oops!", andMessage: "User name is \(userName) 🙄")
+        
         :showAlert(title: "Oops!", andMessage: "Password is \(password) 🤡")
     }
     

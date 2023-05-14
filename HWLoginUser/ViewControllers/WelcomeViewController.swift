@@ -10,7 +10,7 @@ import UIKit
 final class WelcomeViewController: UIViewController {
     
     @IBOutlet var hellowUserField: UILabel!
-   
+    
     var user: String!
     var surname: String!
     
@@ -34,10 +34,8 @@ final class WelcomeViewController: UIViewController {
                                       bottomColor: secondaryColor)
         
         hellowUserField.text = "Hello, \(user ?? "") \(surname ?? "")!"
-       
+        
     }
-    
-    
 }
 
 
