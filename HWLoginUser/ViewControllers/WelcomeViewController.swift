@@ -11,8 +11,9 @@ final class WelcomeViewController: UIViewController {
     
     @IBOutlet var hellowUserField: UILabel!
    
-
-    var username = ""
+    var user: String!
+    var surname: String!
+    
     
     private let primaryColor = UIColor(
         red: 210/255,
@@ -31,7 +32,8 @@ final class WelcomeViewController: UIViewController {
         super.viewDidLoad()
         view.addVerticalGradientLayer(topColor: primaryColor,
                                       bottomColor: secondaryColor)
-        hellowUserField.text = "Hello, \(username)!"
+        
+        hellowUserField.text = "Hello, \(user ?? "") \(surname ?? "")!"
        
     }
     
